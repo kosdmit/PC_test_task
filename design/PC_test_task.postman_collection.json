@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "ce1cb36c-6381-423f-8ea8-a2b049d7765d",
+		"name": "PC_test_task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28993717"
+	},
+	"item": [
+		{
+			"name": "datafile-list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/files/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"files",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "datafile-upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/KosDm/Documents/Python/PyCharm/PC_test_task/test_data/CSV_Test_Data_1.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/files/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"files",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "datafile-detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/files/1/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"files",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "datafile-get-data",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
