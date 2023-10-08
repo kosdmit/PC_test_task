@@ -10,7 +10,13 @@
 			"name": "datafile-list",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 2e8a5698cebb49925c2dcaac13d98a9a1a23411b",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "{{base_url}}/api/files/",
 					"host": [
@@ -29,7 +35,13 @@
 			"name": "datafile-upload",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 2e8a5698cebb49925c2dcaac13d98a9a1a23411b",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "formdata",
 					"formdata": [
@@ -58,7 +70,13 @@
 			"name": "datafile-detail",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 2e8a5698cebb49925c2dcaac13d98a9a1a23411b",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "{{base_url}}/api/files/{{pk}}/",
 					"host": [
@@ -78,7 +96,13 @@
 			"name": "datafile-detail delete",
 			"request": {
 				"method": "DELETE",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 2e8a5698cebb49925c2dcaac13d98a9a1a23411b",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "{{base_url}}/api/files/{{pk}}/",
 					"host": [
@@ -98,7 +122,13 @@
 			"name": "datafile-get-data",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 2e8a5698cebb49925c2dcaac13d98a9a1a23411b",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "{{base_url}}/api/files/{{pk}}/get_data/",
 					"host": [
@@ -119,7 +149,13 @@
 			"name": "datafile-get-data filtered",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 2e8a5698cebb49925c2dcaac13d98a9a1a23411b",
+						"type": "text"
+					}
+				],
 				"url": {
 					"raw": "{{base_url}}/api/files/{{pk}}/get_data/?filter_by=COUNTRY&filter_value=Avon",
 					"host": [
@@ -150,9 +186,15 @@
 			"name": "datafile-get-data sorted",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 2e8a5698cebb49925c2dcaac13d98a9a1a23411b",
+						"type": "text"
+					}
+				],
 				"url": {
-					"raw": "{{base_url}}/api/files/{{pk}}/get_data/?sort_by=LAST_NAME",
+					"raw": "{{base_url}}/api/files/{{pk}}/get_data/?sort_by=UUID",
 					"host": [
 						"{{base_url}}"
 					],
@@ -166,8 +208,42 @@
 					"query": [
 						{
 							"key": "sort_by",
-							"value": "LAST_NAME"
+							"value": "UUID"
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get auth token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{base_url}}/api/api-token-auth/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"api-token-auth",
+						""
 					]
 				}
 			},
@@ -197,7 +273,8 @@
 	"variable": [
 		{
 			"key": "pk",
-			"value": "1"
+			"value": "2",
+			"type": "string"
 		}
 	]
 }
