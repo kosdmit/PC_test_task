@@ -28,11 +28,17 @@ class DataFileViewSet(viewsets.ModelViewSet):
         filter_by = request.query_params.get('filter_by')
         filter_value = request.query_params.get('filter_value')
         if filter_by and filter_value:
-            data_file = data_file[data_file[filter_by] == filter_value]
+            try:
+                data_file = data_file[data_file[filter_by] == filter_value]
+            except KeyError:
+                return Response({'error': 'filter column is not exists'}, status=status.HTTP_400_BAD_REQUEST)
 
         # Sorting
         sort_by = request.query_params.get('sort_by')
         if sort_by:
-            data_file = data_file.sort_values(by=sort_by)
+            try:
+                data_file = data_file.sort_values(by=sort_by)
+            except KeyError:
+                return Response({'error': 'sorting column is not exists'}, status=status.HTTP_400_BAD_REQUEST)
 
         return Response(data_file.to_dict(orient='records'), status=status.HTTP_200_OK)
