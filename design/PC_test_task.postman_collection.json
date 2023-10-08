@@ -13,7 +13,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Token 2e8a5698cebb49925c2dcaac13d98a9a1a23411b",
+						"value": "Token 9dfc5f0c94b7b3beeba62c4384dd565697288050",
 						"type": "text"
 					}
 				],
@@ -38,7 +38,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Token 2e8a5698cebb49925c2dcaac13d98a9a1a23411b",
+						"value": "Token 9dfc5f0c94b7b3beeba62c4384dd565697288050",
 						"type": "text"
 					}
 				],
@@ -48,7 +48,7 @@
 						{
 							"key": "file",
 							"type": "file",
-							"src": "/C:/Users/KosDm/Documents/Python/PyCharm/PC_test_task/test_data/CSV_Test_Data_1.csv"
+							"src": "/C:/Users/KosDm/Documents/Python/PyCharm/PC_test_task/test_data/CSV_Test_Data_3.csv"
 						}
 					]
 				},
@@ -73,7 +73,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Token 2e8a5698cebb49925c2dcaac13d98a9a1a23411b",
+						"value": "Token 9dfc5f0c94b7b3beeba62c4384dd565697288050",
 						"type": "text"
 					}
 				],
@@ -99,7 +99,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Token 2e8a5698cebb49925c2dcaac13d98a9a1a23411b",
+						"value": "Token 9dfc5f0c94b7b3beeba62c4384dd565697288050",
 						"type": "text"
 					}
 				],
@@ -125,7 +125,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Token 2e8a5698cebb49925c2dcaac13d98a9a1a23411b",
+						"value": "Token 9dfc5f0c94b7b3beeba62c4384dd565697288050",
 						"type": "text"
 					}
 				],
@@ -152,7 +152,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Token 2e8a5698cebb49925c2dcaac13d98a9a1a23411b",
+						"value": "Token 9dfc5f0c94b7b3beeba62c4384dd565697288050",
 						"type": "text"
 					}
 				],
@@ -189,7 +189,7 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Token 2e8a5698cebb49925c2dcaac13d98a9a1a23411b",
+						"value": "Token 9dfc5f0c94b7b3beeba62c4384dd565697288050",
 						"type": "text"
 					}
 				],
@@ -230,7 +230,7 @@
 						},
 						{
 							"key": "password",
-							"value": "password123",
+							"value": "kHtAaYL4tS",
 							"type": "text"
 						}
 					]
@@ -273,7 +273,12 @@
 	"variable": [
 		{
 			"key": "pk",
-			"value": "2",
+			"value": "1",
+			"type": "string"
+		},
+		{
+			"key": "base_url",
+			"value": "http://kosdmitsmr.pythonanywhere.com",
 			"type": "string"
 		}
 	]
