@@ -60,14 +60,34 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{base_url}}/api/files/1/",
+					"raw": "{{base_url}}/api/files/{{pk}}/",
 					"host": [
 						"{{base_url}}"
 					],
 					"path": [
 						"api",
 						"files",
-						"1",
+						"{{pk}}",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "datafile-detail delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/files/{{pk}}/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"files",
+						"{{pk}}",
 						""
 					]
 				}
@@ -78,9 +98,106 @@
 			"name": "datafile-get-data",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/files/{{pk}}/get_data/",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"files",
+						"{{pk}}",
+						"get_data",
+						""
+					]
+				}
 			},
 			"response": []
+		},
+		{
+			"name": "datafile-get-data filtered",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/files/{{pk}}/get_data/?filter_by=COUNTRY&filter_value=Avon",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"files",
+						"{{pk}}",
+						"get_data",
+						""
+					],
+					"query": [
+						{
+							"key": "filter_by",
+							"value": "COUNTRY"
+						},
+						{
+							"key": "filter_value",
+							"value": "Avon"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "datafile-get-data sorted",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{base_url}}/api/files/{{pk}}/get_data/?sort_by=LAST_NAME",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"files",
+						"{{pk}}",
+						"get_data",
+						""
+					],
+					"query": [
+						{
+							"key": "sort_by",
+							"value": "LAST_NAME"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "pk",
+			"value": "1"
 		}
 	]
 }
